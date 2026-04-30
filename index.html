@@ -40,18 +40,72 @@
 
   <main>
 
-    <!-- HERO -->
+    <!-- ══════════════════════════════════
+         HERO
+    ══════════════════════════════════ -->
     <section class="hero">
-      <div class="hero-bg">
-        <img
-          src="https://raw.githubusercontent.com/francoaalarcon/imagesnew/main/img1.png"
-          alt="Jóvenes en el Club Deportivo Capitanes"
-          class="hero-img"
-        >
+      <!-- SVG background geométrico -->
+      <svg class="hero-svg" viewBox="0 0 1440 700" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <!-- Fondo marino -->
+        <rect width="1440" height="700" fill="#011638"/>
+
+        <!-- Bloques amarillos grandes (estilo logo) -->
+        <rect x="820" y="60" width="200" height="200" rx="4" fill="#FDCF07" transform="rotate(-6 920 160)"/>
+        <rect x="1040" y="80" width="200" height="200" rx="4" fill="#FDCF07" transform="rotate(-6 1140 180)"/>
+        <rect x="820" y="280" width="200" height="200" rx="4" fill="#FDCF07" transform="rotate(-6 920 380)"/>
+        <rect x="1040" y="300" width="200" height="200" rx="4" fill="#FDCF07" transform="rotate(-6 1140 400)"/>
+
+        <!-- Overlays de letras en los bloques -->
+        <text x="915" y="190" font-family="Montserrat, sans-serif" font-weight="900" font-size="100" fill="#011638" text-anchor="middle" dominant-baseline="middle" transform="rotate(-6 915 160)">C</text>
+        <text x="1135" y="210" font-family="Montserrat, sans-serif" font-weight="900" font-size="100" fill="#011638" text-anchor="middle" dominant-baseline="middle" transform="rotate(-6 1135 180)">A</text>
+        <text x="915" y="410" font-family="Montserrat, sans-serif" font-weight="900" font-size="100" fill="#011638" text-anchor="middle" dominant-baseline="middle" transform="rotate(-6 915 380)">P</text>
+        <text x="1135" y="430" font-family="Montserrat, sans-serif" font-weight="900" font-size="100" fill="#011638" text-anchor="middle" dominant-baseline="middle" transform="rotate(-6 1135 400)">I</text>
+
+        <!-- Bloques segunda fila -->
+        <rect x="1260" y="140" width="200" height="200" rx="4" fill="#FDCF07" transform="rotate(-6 1360 240)"/>
+        <rect x="1260" y="360" width="200" height="200" rx="4" fill="#017EFE" opacity="0.7" transform="rotate(-6 1360 460)"/>
+        <text x="1355" y="270" font-family="Montserrat, sans-serif" font-weight="900" font-size="100" fill="#011638" text-anchor="middle" dominant-baseline="middle" transform="rotate(-6 1355 240)">T</text>
+
+        <!-- Arco azul de fondo -->
+        <circle cx="1100" cy="350" r="400" fill="none" stroke="#017EFE" stroke-width="60" opacity="0.12"/>
+        <circle cx="1100" cy="350" r="280" fill="none" stroke="#017EFE" stroke-width="30" opacity="0.08"/>
+
+        <!-- Líneas diagonales naranja -->
+        <g opacity="0.35" stroke="#E2570A" stroke-width="3">
+          <line x1="680" y1="0" x2="780" y2="700"/>
+          <line x1="700" y1="0" x2="800" y2="700"/>
+          <line x1="720" y1="0" x2="820" y2="700"/>
+          <line x1="740" y1="0" x2="840" y2="700"/>
+          <line x1="760" y1="0" x2="860" y2="700"/>
+        </g>
+
+        <!-- Puntos decorativos -->
+        <g fill="#FDCF07" opacity="0.25">
+          <circle cx="100" cy="100" r="6"/><circle cx="140" cy="100" r="6"/><circle cx="180" cy="100" r="6"/>
+          <circle cx="100" cy="140" r="6"/><circle cx="140" cy="140" r="6"/><circle cx="180" cy="140" r="6"/>
+          <circle cx="100" cy="180" r="6"/><circle cx="140" cy="180" r="6"/><circle cx="180" cy="180" r="6"/>
+          <circle cx="100" cy="220" r="6"/><circle cx="140" cy="220" r="6"/><circle cx="180" cy="220" r="6"/>
+          <circle cx="100" cy="260" r="6"/><circle cx="140" cy="260" r="6"/><circle cx="180" cy="260" r="6"/>
+          <circle cx="100" cy="300" r="6"/><circle cx="140" cy="300" r="6"/><circle cx="180" cy="300" r="6"/>
+        </g>
+
+        <!-- Línea amarilla horizontal inferior -->
+        <rect x="0" y="650" width="620" height="4" fill="#FDCF07" opacity="0.5"/>
+        <rect x="0" y="662" width="400" height="2" fill="#017EFE" opacity="0.4"/>
+      </svg>
+
+      <!-- Texto hero -->
+      <div class="hero-content">
+        <p class="hero-eyebrow">Club Deportivo</p>
+        <h1 class="hero-title">CAPITANES.</h1>
+        <p class="hero-sub">Semillero de Líderes</p>
+        <a href="/actividades" class="btn btn--yellow">Conoce nuestros programas</a>
       </div>
     </section>
 
-    <!-- ── SECCIÓN 1: ESTO ES CAPITANES (blanco) ── -->
+    <!-- ══════════════════════════════════
+         SECCIÓN 1: ESTO ES CAPITANES (blanco)
+    ══════════════════════════════════ -->
     <section class="intro-split">
       <div class="intro-split__inner">
         <div class="intro-split__heading">
@@ -59,91 +113,247 @@
           <p class="bold-tag">CAPITANES.</p>
         </div>
         <div class="intro-split__body">
-          <p>Somos una comunidad deportiva dedicada a la formación de líderes a través del deporte. Con programas diseñados para niños y jóvenes, ofrecemos experiencias únicas en disciplinas de acción y trabajo en equipo.</p>
+          <p>Somos una comunidad deportiva dedicada a la formación de líderes a través del deporte. La identidad de Capitanes se construye a partir de estructura, disciplina y trabajo constante.</p>
           <a href="/actividades" class="btn btn--dark">CONOCE NUESTROS DEPORTES</a>
+        </div>
+        <!-- SVG decorativo -->
+        <div class="intro-split__deco" aria-hidden="true">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="10" width="80" height="80" rx="3" fill="#FDCF07"/>
+            <rect x="110" y="10" width="80" height="80" rx="3" fill="#011638"/>
+            <rect x="10" y="110" width="80" height="80" rx="3" fill="#011638"/>
+            <rect x="110" y="110" width="80" height="80" rx="3" fill="#017EFE"/>
+            <circle cx="100" cy="100" r="18" fill="#FDCF07"/>
+          </svg>
         </div>
       </div>
     </section>
 
-    <!-- ── SECCIÓN 2: EXPERIENCIA AMPLIFICADA (negro) ── -->
+    <!-- ══════════════════════════════════
+         SECCIÓN 2: EXPERIENCIA AMPLIFICADA (marino)
+    ══════════════════════════════════ -->
     <section class="feature-section feature-section--dark">
       <div class="feature-section__inner">
         <div class="feature-section__text">
           <p class="fs-label">ESTO ES</p>
           <h2 class="fs-title fs-title--yellow">Experiencia Amplificada</h2>
-          <p class="fs-body">Estás en el centro de la acción en Capitanes. Ofrecemos progresión en tiempo real usando equipamiento innovador y una filosofía de instrucción inmersiva. Todo nuestro equipo está comprometido a llevar tu rendimiento al siguiente nivel.</p>
+          <p class="fs-body">Estás en el centro de la acción. Ofrecemos progresión en tiempo real usando equipamiento innovador y una filosofía de instrucción inmersiva. Todo nuestro equipo está comprometido a llevar tu rendimiento al siguiente nivel.</p>
           <a href="/actividades" class="btn btn--yellow">Ver experiencias Capitanes</a>
         </div>
-        <div class="feature-section__media">
-          <div class="diagonal-lines diagonal-lines--blue"></div>
-          <div class="diagonal-img-wrap">
-            <img src="https://raw.githubusercontent.com/francoaalarcon/imagesnew/main/img2.png" alt="Experiencia deportiva Capitanes" class="diagonal-img">
-          </div>
+        <div class="feature-section__media" aria-hidden="true">
+          <svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" class="section-svg">
+            <!-- Fondo -->
+            <rect width="480" height="360" fill="#03093F" rx="4"/>
+            <!-- Bloque central amarillo -->
+            <rect x="140" y="80" width="200" height="200" rx="4" fill="#FDCF07" transform="rotate(-8 240 180)"/>
+            <!-- Flecha / rayo dinámico -->
+            <polygon points="200,140 310,180 200,220 230,180" fill="#011638" transform="rotate(-8 240 180)"/>
+            <!-- Arco azul -->
+            <circle cx="380" cy="60" r="120" fill="none" stroke="#017EFE" stroke-width="25" opacity="0.4"/>
+            <!-- Líneas de velocidad -->
+            <g stroke="#FDCF07" stroke-width="2.5" opacity="0.5">
+              <line x1="20" y1="150" x2="120" y2="150"/>
+              <line x1="20" y1="170" x2="100" y2="170"/>
+              <line x1="20" y1="190" x2="110" y2="190"/>
+              <line x1="20" y1="210" x2="90"  y2="210"/>
+            </g>
+            <!-- Puntos -->
+            <g fill="#017EFE" opacity="0.4">
+              <circle cx="420" cy="280" r="5"/>
+              <circle cx="445" cy="280" r="5"/>
+              <circle cx="420" cy="305" r="5"/>
+              <circle cx="445" cy="305" r="5"/>
+              <circle cx="420" cy="330" r="5"/>
+              <circle cx="445" cy="330" r="5"/>
+            </g>
+            <!-- Acento naranja -->
+            <rect x="0" y="340" width="200" height="6" fill="#E2570A" rx="2"/>
+          </svg>
         </div>
       </div>
     </section>
 
-    <!-- ── SECCIÓN 3: CAPITANES TE INVITA (amarillo) ── -->
+    <!-- ══════════════════════════════════
+         SECCIÓN 3: CAPITANES TE INVITA (amarillo)
+    ══════════════════════════════════ -->
     <section class="invite-section">
       <h2 class="invite-section__title">CAPITANES TE INVITA</h2>
       <div class="invite-section__card">
         <div class="programs-grid">
+
+          <!-- Fútbol -->
           <div class="program-item">
+            <div class="program-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30" cy="30" r="26" fill="none" stroke="#011638" stroke-width="3"/>
+                <polygon points="30,8 37,22 51,22 40,31 44,45 30,37 16,45 20,31 9,22 23,22" fill="#011638" opacity="0.15"/>
+                <polygon points="30,12 36,23 48,23 39,30 42,42 30,35 18,42 21,30 12,23 24,23" fill="none" stroke="#011638" stroke-width="2"/>
+                <circle cx="30" cy="30" r="5" fill="#FDCF07"/>
+              </svg>
+            </div>
             <span class="program-item__name">CAPITANES.</span>
             <span class="program-item__sub">FÚTBOL</span>
           </div>
+
+          <!-- Básquet -->
           <div class="program-item">
+            <div class="program-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30" cy="30" r="26" fill="none" stroke="#011638" stroke-width="3"/>
+                <path d="M4,30 Q17,10 30,30 Q43,50 56,30" fill="none" stroke="#011638" stroke-width="2.5"/>
+                <path d="M30,4 Q50,17 30,30 Q10,43 30,56" fill="none" stroke="#011638" stroke-width="2.5"/>
+                <circle cx="30" cy="30" r="5" fill="#FDCF07"/>
+              </svg>
+            </div>
             <span class="program-item__name">CAPITANES.</span>
             <span class="program-item__sub">BÁSQUET</span>
           </div>
+
+          <!-- Atletismo -->
           <div class="program-item">
+            <div class="program-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                <!-- Figura corriendo -->
+                <circle cx="36" cy="10" r="6" fill="#011638"/>
+                <line x1="36" y1="16" x2="30" y2="30" stroke="#011638" stroke-width="3" stroke-linecap="round"/>
+                <line x1="30" y1="30" x2="18" y2="38" stroke="#011638" stroke-width="3" stroke-linecap="round"/>
+                <line x1="30" y1="30" x2="40" y2="40" stroke="#011638" stroke-width="3" stroke-linecap="round"/>
+                <line x1="22" y1="22" x2="38" y2="26" stroke="#011638" stroke-width="3" stroke-linecap="round"/>
+                <line x1="18" y1="38" x2="14" y2="50" stroke="#011638" stroke-width="3" stroke-linecap="round"/>
+                <line x1="40" y1="40" x2="44" y2="52" stroke="#011638" stroke-width="3" stroke-linecap="round"/>
+                <!-- Línea de pista -->
+                <line x1="8" y1="54" x2="52" y2="54" stroke="#FDCF07" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </div>
             <span class="program-item__name">CAPITANES.</span>
             <span class="program-item__sub">ATLETISMO</span>
           </div>
+
+          <!-- Natación -->
           <div class="program-item">
+            <div class="program-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                <!-- Olas -->
+                <path d="M4,40 Q12,32 20,40 Q28,48 36,40 Q44,32 52,40" fill="none" stroke="#017EFE" stroke-width="3.5" stroke-linecap="round"/>
+                <path d="M4,50 Q12,42 20,50 Q28,58 36,50 Q44,42 52,50" fill="none" stroke="#011638" stroke-width="3.5" stroke-linecap="round"/>
+                <!-- Nadador -->
+                <circle cx="38" cy="22" r="6" fill="#011638"/>
+                <path d="M32,26 Q20,28 10,34" fill="none" stroke="#011638" stroke-width="3.5" stroke-linecap="round"/>
+                <path d="M38,28 Q42,34 44,38" fill="none" stroke="#011638" stroke-width="3.5" stroke-linecap="round"/>
+                <path d="M44,26 Q50,22 54,18" fill="none" stroke="#FDCF07" stroke-width="3.5" stroke-linecap="round"/>
+              </svg>
+            </div>
             <span class="program-item__name">CAPITANES.</span>
             <span class="program-item__sub">NATACIÓN</span>
           </div>
+
+          <!-- Skate -->
           <div class="program-item">
+            <div class="program-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                <!-- Tabla -->
+                <rect x="8" y="28" width="44" height="10" rx="5" fill="#011638"/>
+                <!-- Ruedas -->
+                <circle cx="18" cy="42" r="5" fill="#011638"/>
+                <circle cx="18" cy="42" r="2.5" fill="#FDCF07"/>
+                <circle cx="42" cy="42" r="5" fill="#011638"/>
+                <circle cx="42" cy="42" r="2.5" fill="#FDCF07"/>
+                <!-- Figura -->
+                <circle cx="32" cy="10" r="5.5" fill="#011638"/>
+                <line x1="32" y1="16" x2="30" y2="26" stroke="#011638" stroke-width="3" stroke-linecap="round"/>
+                <line x1="24" y1="20" x2="38" y2="22" stroke="#011638" stroke-width="3" stroke-linecap="round"/>
+                <line x1="30" y1="26" x2="22" y2="32" stroke="#011638" stroke-width="3" stroke-linecap="round"/>
+                <line x1="30" y1="26" x2="36" y2="30" stroke="#011638" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </div>
             <span class="program-item__name">CAPITANES.</span>
             <span class="program-item__sub">SKATE</span>
           </div>
+
+          <!-- Campamentos -->
           <div class="program-item">
+            <div class="program-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                <!-- Tienda de campaña -->
+                <polygon points="30,8 54,48 6,48" fill="#011638" opacity="0.15" stroke="#011638" stroke-width="3" stroke-linejoin="round"/>
+                <polygon points="30,18 46,48 14,48" fill="#FDCF07" opacity="0.8"/>
+                <rect x="24" y="36" width="12" height="12" rx="1" fill="#011638"/>
+                <!-- Estrella -->
+                <circle cx="30" cy="14" r="3" fill="#FDCF07"/>
+                <!-- Suelo -->
+                <line x1="4" y1="50" x2="56" y2="50" stroke="#011638" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </div>
             <span class="program-item__name">CAPITANES.</span>
             <span class="program-item__sub">CAMPAMENTOS</span>
           </div>
+
         </div>
       </div>
       <a href="/actividades" class="btn btn--dark">Encuentra tu programa</a>
     </section>
 
-    <!-- ── SECCIÓN 4: QUOTE (blanco) ── -->
+    <!-- ══════════════════════════════════
+         SECCIÓN 4: QUOTE (blanco)
+    ══════════════════════════════════ -->
     <section class="quote-section">
       <div class="quote-section__inner">
         <div class="quote-section__text">
           <blockquote>
             "Es fundamental que los jóvenes deportistas se sientan empoderados y seguros. Capitanes les da las herramientas que necesitan para progresar y triunfar en el mundo del deporte a través de nuestro increíble equipo de entrenadores."
           </blockquote>
-          <cite>— María González</cite>
+          <cite>— María González, Entrenadora Principal</cite>
           <a href="/nosotros" class="btn btn--dark">SABER MÁS</a>
         </div>
-        <div class="quote-section__media">
-          <div class="diagonal-lines diagonal-lines--orange"></div>
-          <div class="diagonal-img-wrap diagonal-img-wrap--right">
-            <img src="https://raw.githubusercontent.com/francoaalarcon/imagesnew/main/img3.png" alt="Deportistas Capitanes" class="diagonal-img">
-          </div>
+        <div class="quote-section__media" aria-hidden="true">
+          <svg viewBox="0 0 420 300" xmlns="http://www.w3.org/2000/svg" class="section-svg">
+            <!-- Fondo blanco con elementos geométricos -->
+            <rect width="420" height="300" fill="#F8F9FC"/>
+            <!-- Comillas gigantes decorativas -->
+            <text x="20" y="200" font-family="Montserrat, sans-serif" font-weight="900" font-size="220" fill="#FDCF07" opacity="0.18">"</text>
+            <!-- Bloques de colores -->
+            <rect x="300" y="20" width="80" height="80" rx="3" fill="#011638"/>
+            <rect x="300" y="110" width="80" height="80" rx="3" fill="#FDCF07"/>
+            <rect x="300" y="200" width="80" height="80" rx="3" fill="#017EFE"/>
+            <!-- Líneas de acento -->
+            <rect x="20" y="270" width="240" height="4" fill="#FDCF07"/>
+            <rect x="20" y="278" width="160" height="2" fill="#E2570A"/>
+          </svg>
         </div>
       </div>
     </section>
 
-    <!-- ── SECCIÓN 5: LIBERTAD REALIZADA (amarillo) ── -->
+    <!-- ══════════════════════════════════
+         SECCIÓN 5: LIBERTAD REALIZADA (amarillo)
+    ══════════════════════════════════ -->
     <section class="feature-section feature-section--yellow">
       <div class="feature-section__inner feature-section__inner--reverse">
-        <div class="feature-section__media">
-          <div class="diagonal-lines diagonal-lines--navy"></div>
-          <div class="diagonal-img-wrap diagonal-img-wrap--left">
-            <img src="https://raw.githubusercontent.com/francoaalarcon/imagesnew/main/img4.png" alt="Libertad en Capitanes" class="diagonal-img">
-          </div>
+        <div class="feature-section__media" aria-hidden="true">
+          <svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" class="section-svg">
+            <rect width="480" height="360" fill="#FDCF07" rx="4"/>
+            <!-- Forma abierta / libertad -->
+            <circle cx="240" cy="180" r="130" fill="none" stroke="#011638" stroke-width="40" opacity="0.12"/>
+            <circle cx="240" cy="180" r="80" fill="none" stroke="#011638" stroke-width="20" opacity="0.1"/>
+            <!-- Bloque marino principal -->
+            <rect x="160" y="100" width="160" height="160" rx="4" fill="#011638" transform="rotate(12 240 180)"/>
+            <!-- Estrella / ancla interna -->
+            <circle cx="240" cy="180" r="40" fill="#FDCF07" transform="rotate(12 240 180)"/>
+            <polygon points="240,148 248,172 274,172 253,188 261,214 240,198 219,214 227,188 206,172 232,172" fill="#011638" transform="rotate(12 240 180)"/>
+            <!-- Líneas que irradian -->
+            <g stroke="#011638" stroke-width="2" opacity="0.2">
+              <line x1="240" y1="0"   x2="240" y2="60"/>
+              <line x1="240" y1="300" x2="240" y2="360"/>
+              <line x1="0"   y1="180" x2="60"  y2="180"/>
+              <line x1="420" y1="180" x2="480" y2="180"/>
+            </g>
+            <!-- Puntos decorativos -->
+            <g fill="#011638" opacity="0.15">
+              <circle cx="40"  cy="40"  r="6"/><circle cx="80"  cy="40"  r="6"/>
+              <circle cx="40"  cy="80"  r="6"/><circle cx="80"  cy="80"  r="6"/>
+              <circle cx="400" cy="280" r="6"/><circle cx="440" cy="280" r="6"/>
+              <circle cx="400" cy="320" r="6"/><circle cx="440" cy="320" r="6"/>
+            </g>
+          </svg>
         </div>
         <div class="feature-section__text">
           <p class="fs-label fs-label--dark">ESTO ES</p>
@@ -154,7 +364,9 @@
       </div>
     </section>
 
-    <!-- ── SECCIÓN 6: PASIÓN PERSONIFICADA (negro) ── -->
+    <!-- ══════════════════════════════════
+         SECCIÓN 6: PASIÓN PERSONIFICADA (marino)
+    ══════════════════════════════════ -->
     <section class="feature-section feature-section--dark">
       <div class="feature-section__inner">
         <div class="feature-section__text">
@@ -163,16 +375,39 @@
           <p class="fs-body">Somos amantes de la aventura y formadores de líderes, obsesionados con la acción, la autoexpresión y el compromiso de sacar lo mejor de cada uno. Y llevamos más de 10 años haciéndolo.</p>
           <a href="/nosotros" class="btn btn--yellow">Conoce la historia de Capitanes</a>
         </div>
-        <div class="feature-section__media">
-          <div class="diagonal-lines diagonal-lines--mixed"></div>
-          <div class="diagonal-img-wrap">
-            <img src="https://raw.githubusercontent.com/francoaalarcon/imagesnew/main/img5.png" alt="Pasión Capitanes" class="diagonal-img">
-          </div>
+        <div class="feature-section__media" aria-hidden="true">
+          <svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" class="section-svg">
+            <rect width="480" height="360" fill="#03093F" rx="4"/>
+            <!-- Rayos de energía -->
+            <g stroke="#FDCF07" stroke-width="3" opacity="0.6" stroke-linecap="round">
+              <line x1="240" y1="180" x2="380" y2="60"/>
+              <line x1="240" y1="180" x2="420" y2="160"/>
+              <line x1="240" y1="180" x2="400" y2="280"/>
+              <line x1="240" y1="180" x2="300" y2="320"/>
+            </g>
+            <g stroke="#E2570A" stroke-width="2" opacity="0.5" stroke-linecap="round">
+              <line x1="240" y1="180" x2="100" y2="50"/>
+              <line x1="240" y1="180" x2="60"  y2="150"/>
+              <line x1="240" y1="180" x2="80"  y2="300"/>
+              <line x1="240" y1="180" x2="180" y2="340"/>
+            </g>
+            <!-- Círculo central -->
+            <circle cx="240" cy="180" r="70" fill="#FDCF07"/>
+            <circle cx="240" cy="180" r="50" fill="#011638"/>
+            <circle cx="240" cy="180" r="30" fill="#FDCF07"/>
+            <!-- Letra C en el centro -->
+            <text x="240" y="195" font-family="Montserrat, sans-serif" font-weight="900" font-size="38" fill="#011638" text-anchor="middle">C</text>
+            <!-- Arcos decorativos -->
+            <circle cx="240" cy="180" r="110" fill="none" stroke="#017EFE" stroke-width="2" stroke-dasharray="8 6" opacity="0.4"/>
+            <circle cx="240" cy="180" r="150" fill="none" stroke="#017EFE" stroke-width="1" stroke-dasharray="4 8" opacity="0.25"/>
+          </svg>
         </div>
       </div>
     </section>
 
-    <!-- ── SECCIÓN 7: NEWSLETTER (gris claro) ── -->
+    <!-- ══════════════════════════════════
+         SECCIÓN 7: NEWSLETTER (gris claro)
+    ══════════════════════════════════ -->
     <section class="newsletter-section">
       <div class="newsletter-section__inner">
         <div class="newsletter-section__socials">
@@ -196,10 +431,11 @@
 
   </main>
 
-  <!-- FOOTER -->
+  <!-- ══════════════════════════════════
+       FOOTER
+  ══════════════════════════════════ -->
   <footer class="site-footer">
     <div class="site-footer__top">
-
       <div class="footer-col">
         <h3 class="footer-heading">MÁS SOBRE NOSOTROS</h3>
         <ul class="footer-links">
@@ -213,7 +449,6 @@
           <li><a href="/comunidad">Reglamento de Comunidad</a></li>
         </ul>
       </div>
-
       <div class="footer-col">
         <h3 class="footer-heading">NUESTROS ALIADOS</h3>
         <div class="footer-partners">
@@ -224,11 +459,9 @@
           <span class="partner-placeholder">YETI</span>
         </div>
       </div>
-
     </div>
 
     <div class="site-footer__bottom">
-
       <div class="footer-col">
         <h3 class="footer-heading">CONÉCTATE</h3>
         <div class="footer-socials">
@@ -243,7 +476,6 @@
           </a>
         </div>
       </div>
-
       <div class="footer-col">
         <h3 class="footer-heading">NUESTROS PROGRAMAS</h3>
         <div class="footer-brands">
@@ -255,11 +487,10 @@
           <span>Campamentos</span>
         </div>
       </div>
-
     </div>
 
     <div class="site-footer__logo">
-      <img src="https://raw.githubusercontent.com/francoaalarcon/imagesnew/main/logocapitanes.png" alt="Capitanes" class="footer-logo-img">
+      <img src="https://raw.githubusercontent.com/francoaalarcon/imagesnew/main/logocapitanes.png" alt="Club Deportivo Capitanes" class="footer-logo-img">
     </div>
 
     <div class="site-footer__bar">

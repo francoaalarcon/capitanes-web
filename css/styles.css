@@ -219,20 +219,66 @@ img {
   margin-top: 72px;
   width: 100%;
   height: calc(100vh - 72px);
+  min-height: 500px;
   overflow: hidden;
   position: relative;
+  background: var(--color-navy);
+  display: flex;
+  align-items: center;
 }
 
-.hero-bg {
+.hero-svg {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
 }
 
-.hero-img {
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 60px;
+  max-width: 660px;
+}
+
+.hero-eyebrow {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--color-yellow);
+  margin-bottom: 12px;
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  line-height: 0.95;
+  letter-spacing: -2px;
+  color: var(--color-white);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 40px;
+}
+
+/* ===========================
+   SECTION SVGs
+=========================== */
+.section-svg {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center top;
+  border-radius: 4px;
 }
 
 /* ===========================
@@ -281,6 +327,13 @@ img {
 
 .intro-split__body {
   flex: 1;
+}
+
+.intro-split__deco {
+  flex: 0 0 160px;
+  width: 160px;
+  height: 160px;
+  opacity: 0.9;
 }
 
 .intro-split__body p {
@@ -505,6 +558,13 @@ img {
   align-items: flex-start;
   border-left: 3px solid var(--color-navy);
   padding-left: 14px;
+  gap: 6px;
+}
+
+.program-item__icon {
+  width: 44px;
+  height: 44px;
+  margin-bottom: 4px;
 }
 
 .program-item__name {
