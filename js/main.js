@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = isOpen ? 'hidden' : '';
   });
 
-  // Close nav when a link is clicked
+  // Cerrar menú al hacer clic en un enlace
   navOverlay.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       menuToggle.classList.remove('is-open');
