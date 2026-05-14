@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const navOffcanvas = document.querySelector('.nav-offcanvas');
   const navClose = document.querySelector('.nav-offcanvas__close');
 
+  if (!menuToggle || !navOffcanvas || !navClose) return;
+
   function openMenu() {
     menuToggle.classList.add('is-open');
     navOffcanvas.classList.add('is-open');
