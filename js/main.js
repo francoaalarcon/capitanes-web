@@ -1,10 +1,8 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navOffcanvas = document.querySelector('.nav-offcanvas');
-  const navClose = document.querySelector('.nav-offcanvas__close');
+const menuToggle = document.querySelector('.menu-toggle');
+const navOffcanvas = document.querySelector('.nav-offcanvas');
+const navClose = document.querySelector('.nav-offcanvas__close');
 
-  if (!menuToggle || !navOffcanvas || !navClose) return;
-
+if (menuToggle && navOffcanvas && navClose) {
   function openMenu() {
     menuToggle.classList.add('is-open');
     navOffcanvas.classList.add('is-open');
@@ -39,4 +37,4 @@ document.addEventListener('DOMContentLoaded', () => {
       closeMenu();
     }
   });
-});
+}
