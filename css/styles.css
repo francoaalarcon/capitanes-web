@@ -178,12 +178,12 @@ img {
 =========================== */
 .nav-offcanvas {
   position: fixed;
-  top: 72px;
+  top: 0;
   right: 0;
   width: 100%;
-  height: calc(100vh - 72px);
+  height: 100vh;
   background: var(--color-white);
-  z-index: 999;
+  z-index: 1001;
   transform: translateX(100%);
   transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: auto;
