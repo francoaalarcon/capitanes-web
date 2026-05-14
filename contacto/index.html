@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Contacto | Club Deportivo Capitanes</title>
+  <meta name="description" content="Contactate con Club Deportivo Capitanes. Estamos para ayudarte con inscripciones, consultas y todo lo que necesites.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css?v=202c5779">
+  <style>
+    .contact-section {
+      padding: 80px 24px;
+      background: var(--color-white);
+    }
+    .contact-section__inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .contact-info__label {
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--color-blue);
+      margin-bottom: 16px;
+    }
+    .contact-info__title {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      color: var(--color-navy);
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+    .contact-info__text {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #444;
+      margin-bottom: 40px;
+    }
+    .contact-data {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .contact-data__item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .contact-data__icon {
+      width: 44px;
+      height: 44px;
+      background: var(--color-yellow);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-data__icon svg {
+      width: 22px;
+      height: 22px;
+    }
+    .contact-data__detail strong {
+      display: block;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 0.8rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--color-navy);
+      margin-bottom: 4px;
+    }
+    .contact-data__detail span {
+      font-size: 0.95rem;
+      color: #555;
+    }
+    .contact-form {
+      background: var(--color-navy);
+      padding: 48px;
+      border-radius: 4px;
+    }
+    .contact-form__title {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--color-white);
+      margin-bottom: 32px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 8px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: var(--color-white);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      padding: 14px 16px;
+      border-radius: 2px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: rgba(255,255,255,0.3);
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--color-yellow);
+    }
+    .form-group select option {
+      background: var(--color-navy);
+      color: var(--color-white);
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    @media (max-width: 768px) {
+      .contact-section__inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .contact-form {
+        padding: 32px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <img src="../assets/logo.png" alt="Club Deportivo Capitanes" class="logo-img">
+      </a>
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <span class="menu-label">MENU</span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="nav-offcanvas" aria-hidden="true">
+    <div class="nav-offcanvas__header">
+      <img src="../assets/logo.png" alt="Club Deportivo Capitanes" class="nav-offcanvas__logo">
+      <button class="nav-offcanvas__close" aria-label="Cerrar menú">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="3" y1="3" x2="25" y2="25" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="25" y1="3" x2="3" y2="25" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <div class="nav-offcanvas__body">
+      <ul class="nav-grid">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/campamentos">Campamentos</a></li>
+        <li><a href="/actividades">Actividades</a></li>
+        <li><a href="/nosotros">Nosotros</a></li>
+        <li><a href="/contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="hero-fullscreen" style="min-height: 50vh; height: 50vh;">
+      <div class="hero-fullscreen__bg">
+        <img src="https://raw.githubusercontent.com/francoaalarcon/capitanes-web/refs/heads/main/assets/stock%20(5).jpg" alt="Club Capitanes">
+      </div>
+      <div class="hero-fullscreen__overlay"></div>
+      <div class="hero-fullscreen__content">
+        <p class="hero-fullscreen__eyebrow">Capitanes</p>
+        <h1 class="hero-fullscreen__title">CONTACTO.</h1>
+        <p class="hero-fullscreen__subtitle">Estamos para ayudarte</p>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="contact-section__inner">
+        <div class="contact-info">
+          <p class="contact-info__label">Hablemos</p>
+          <h2 class="contact-info__title">¿Listo para ser parte de Capitanes?</h2>
+          <p class="contact-info__text">Completá el formulario y un miembro de nuestro equipo se va a comunicar con vos dentro de las 24 horas. También podés contactarnos directamente por cualquiera de los siguientes medios.</p>
+          <div class="contact-data">
+            <div class="contact-data__item">
+              <div class="contact-data__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#011638" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.9 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9a16 16 0 0 0 6.72 6.72l1.06-1.06a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="contact-data__detail">
+                <strong>Teléfono</strong>
+                <span>+54 11 4000-0000</span>
+              </div>
+            </div>
+            <div class="contact-data__item">
+              <div class="contact-data__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#011638" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="contact-data__detail">
+                <strong>Email</strong>
+                <span>info@capitanes.com.ar</span>
+              </div>
+            </div>
+            <div class="contact-data__item">
+              <div class="contact-data__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#011638" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-data__detail">
+                <strong>Dirección</strong>
+                <span>Av. Deportiva 1234, Buenos Aires</span>
+              </div>
+            </div>
+            <div class="contact-data__item">
+              <div class="contact-data__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#011638" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="contact-data__detail">
+                <strong>Horarios</strong>
+                <span>Lunes a viernes 8:00 – 21:00 hs<br>Sábados 8:00 – 18:00 hs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h3 class="contact-form__title">Envianos un mensaje</h3>
+          <form onsubmit="return false;">
+            <div class="form-group">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="tu@email.com">
+            </div>
+            <div class="form-group">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="+54 11 0000-0000">
+            </div>
+            <div class="form-group">
+              <label for="interes">Me interesa</label>
+              <select id="interes" name="interes">
+                <option value="">Seleccioná una opción</option>
+                <option value="futbol">Fútbol</option>
+                <option value="basquet">Básquet</option>
+                <option value="atletismo">Atletismo</option>
+                <option value="natacion">Natación</option>
+                <option value="skate">Skate</option>
+                <option value="campamentos">Campamentos</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" placeholder="Contanos en qué podemos ayudarte..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--yellow" style="width:100%; justify-content:center;">ENVIAR MENSAJE</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter-section">
+      <div class="newsletter-section__inner">
+        <div class="newsletter-section__socials">
+          <a href="#" class="social-icon" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+        <p class="newsletter-section__label">SUSCRÍBETE A NOTICIAS Y NOVEDADES</p>
+        <form class="newsletter-form" onsubmit="return false;">
+          <input type="email" placeholder="Correo electrónico" class="newsletter-form__input" aria-label="Correo electrónico">
+          <button type="submit" class="newsletter-form__btn">IR</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__top">
+      <div class="footer-col">
+        <h3 class="footer-heading">MÁS SOBRE NOSOTROS</h3>
+        <ul class="footer-links">
+          <li><a href="/nosotros">Quiénes Somos</a></li>
+          <li><a href="/contacto">Contacto</a></li>
+          <li><a href="/terminos">Términos de Uso</a></li>
+          <li><a href="/privacidad">Política de Privacidad</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-heading">NUESTROS ALIADOS</h3>
+        <div class="footer-partners">
+          <span class="partner-placeholder">Nike</span>
+          <span class="partner-placeholder">Adidas</span>
+          <span class="partner-placeholder">Red Bull</span>
+          <span class="partner-placeholder">GoPro</span>
+          <span class="partner-placeholder">YETI</span>
+        </div>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <div class="footer-col">
+        <h3 class="footer-heading">CONÉCTATE</h3>
+        <div class="footer-socials">
+          <a href="#" class="social-icon social-icon--footer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" class="social-icon social-icon--footer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="#" class="social-icon social-icon--footer" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-heading">NUESTROS PROGRAMAS</h3>
+        <div class="footer-brands">
+          <span>Fútbol</span>
+          <span>Básquet</span>
+          <span>Atletismo</span>
+          <span>Natación</span>
+          <span>Skate</span>
+          <span>Campamentos</span>
+        </div>
+      </div>
+    </div>
+    <div class="site-footer__logo">
+      <img src="../assets/logo.png" alt="Club Deportivo Capitanes" class="footer-logo-img">
+    </div>
+    <div class="site-footer__bar">
+      <p>&copy; 2026 Club Deportivo Capitanes</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=42d1f72a"></script>
+</body>
+</html>
