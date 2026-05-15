@@ -1005,9 +1005,28 @@ img {
   }
 }
 /* ===========================
-   HERO FULLSCREEN CON IMAGEN DE FONDO
+   HERO SLIDESHOW CON EFECTO KEN BURNS
 =========================== */
-.hero-fullscreen {
+
+/* Keyframes Ken Burns – 4 variantes con distintas direcciones */
+@keyframes kb-1 {
+  0%   { transform: scale(1)    translate(0%,   0%); }
+  100% { transform: scale(1.14) translate(-2%,  1%); }
+}
+@keyframes kb-2 {
+  0%   { transform: scale(1.12) translate(2%,   1%); }
+  100% { transform: scale(1)    translate(-1%, -1%); }
+}
+@keyframes kb-3 {
+  0%   { transform: scale(1)    translate(-1%,  2%); }
+  100% { transform: scale(1.13) translate(1%,  -1%); }
+}
+@keyframes kb-4 {
+  0%   { transform: scale(1.1)  translate(-2%, -1%); }
+  100% { transform: scale(1)    translate(2%,   1%); }
+}
+
+.hero-slideshow {
   position: relative;
   margin-top: 72px;
   width: 100%;
@@ -1018,38 +1037,83 @@ img {
   overflow: hidden;
 }
 
-.hero-fullscreen__bg {
+.hero-slideshow__track {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   z-index: 0;
 }
 
-.hero-fullscreen__bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+/* Cada slide ocupa toda la pista y se crossfadea */
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.4s ease;
 }
 
-.hero-fullscreen__overlay {
+.hero-slide--active {
+  opacity: 1;
+}
+
+/* Imagen de fondo con Ken Burns */
+.hero-slide__bg {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, rgba(1,22,56,0.85) 0%, rgba(1,22,56,0.6) 100%);
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+  /* Duración base; se reinicia vía JS al activar el slide */
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+/* Asignar animación a cada slide según su posición */
+.hero-slide:nth-child(1) .hero-slide__bg { animation-name: kb-1; }
+.hero-slide:nth-child(2) .hero-slide__bg { animation-name: kb-2; }
+.hero-slide:nth-child(3) .hero-slide__bg { animation-name: kb-3; }
+.hero-slide:nth-child(4) .hero-slide__bg { animation-name: kb-4; }
+
+.hero-slideshow__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(1,22,56,0.85) 0%, rgba(1,22,56,0.5) 100%);
   z-index: 1;
 }
 
-.hero-fullscreen__content {
+.hero-slideshow__content {
   position: relative;
   z-index: 2;
   max-width: 700px;
   padding: 0 60px;
   color: var(--color-white);
+}
+
+/* Dots de navegación */
+.hero-slideshow__dots {
+  position: absolute;
+  bottom: 32px;
+  left: 60px;
+  z-index: 3;
+  display: flex;
+  gap: 10px;
+}
+
+.hero-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero-dot--active {
+  background: var(--color-yellow);
+  border-color: var(--color-yellow);
+  transform: scale(1.25);
 }
 
 .hero-fullscreen__eyebrow {
@@ -1078,17 +1142,21 @@ img {
   font-size: 1.1rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
   margin-bottom: 40px;
 }
 
 @media (max-width: 768px) {
-  .hero-fullscreen__content {
+  .hero-slideshow__content {
     padding: 0 28px;
     text-align: center;
   }
   .hero-fullscreen__title {
     font-size: 3rem;
+  }
+  .hero-slideshow__dots {
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
